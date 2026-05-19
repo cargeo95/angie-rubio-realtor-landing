@@ -188,58 +188,6 @@
       0%,100% { transform: rotate(45deg) translateY(0); }
       50%      { transform: rotate(45deg) translateY(5px); }
     }
-    /* ─── Hero property preview cards ─── */
-    .hero-props-label {
-      font-size: 11px;
-      color: rgba(255,255,255,0.38);
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-      margin-top: 32px;
-    }
-    .hero-props { display: flex; gap: 12px; justify-content: center; }
-    .hero-prop-card {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 14px;
-      overflow: hidden;
-      width: 158px;
-      flex-shrink: 0;
-      transition: transform 0.25s, border-color 0.25s;
-    }
-    .hero-prop-card:hover { transform: translateY(-4px); border-color: rgba(201,168,76,0.55); }
-    .prop-thumb {
-      height: 86px;
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      padding: 10px;
-    }
-    .prop-thumb-1 { background: linear-gradient(135deg,#1B4332 0%,#2D6A4F 100%); }
-    .prop-thumb-2 { background: linear-gradient(135deg,#1B3A5C 0%,#2563A8 100%); }
-    .prop-thumb-3 { background: linear-gradient(135deg,#4A2040 0%,#8B3A62 100%); }
-    .prop-thumb svg { width: 52px; height: 52px; opacity: 0.13; fill: white; stroke: none; position: absolute; bottom: 6px; left: 10px; }
-    .prop-badge {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      padding: 4px 10px;
-      border-radius: 50px;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1;
-    }
-    .prop-badge.nueva { background: var(--gold); color: var(--navy); }
-    .prop-badge.remo  { background: rgba(255,255,255,0.92); color: var(--navy); }
-    .prop-info { padding: 12px 14px 14px; }
-    .prop-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; color: var(--white); margin-bottom: 4px; }
-    .prop-loc { font-size: 11px; color: rgba(255,255,255,0.55); }
-    .prop-loc::before { content: '📍'; font-size: 10px; margin-right: 3px; }
-
     /* ─── 2. STATS ────────────────────────────────────────────────── */
     #stats {
       background: var(--navy);
@@ -270,9 +218,6 @@
       color: rgba(255,255,255,0.75);
       line-height: 1.4;
     }
-    .stat-icon { width: 30px; height: 30px; margin: 0 auto 10px; }
-    .stat-icon svg { width: 100%; height: 100%; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.65; }
-
     /* ─── 3. OFERTA ───────────────────────────────────────────────── */
     #oferta { background: var(--cream); }
     .oferta-inner {
@@ -692,32 +637,6 @@
     .testi-name { font-weight: 700; font-size: 14px; color: var(--navy); }
     .testi-city { font-size: 12px; color: var(--text-mid); margin-top: 2px; }
 
-    /* ─── ZONAS ──────────────────────────────────────────────────── */
-    #zonas { background: var(--navy-2); }
-    #zonas .eyebrow { text-align: center; }
-    #zonas h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(26px, 3.5vw, 40px);
-      font-weight: 800;
-      color: var(--white);
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .zonas-sub { text-align: center; font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 48px; }
-    .zonas-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
-    .zona-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 22px 12px;
-      text-align: center;
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
-    }
-    .zona-card:hover { background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.35); transform: translateY(-3px); }
-    .zona-icon { font-size: 26px; margin-bottom: 10px; }
-    .zona-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--white); margin-bottom: 4px; }
-    .zona-county { font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.4; }
-
     /* ─── 7. FAQ ──────────────────────────────────────────────────── */
     #faq { background: var(--white); }
     #faq .eyebrow { text-align: center; }
@@ -941,7 +860,6 @@
       .oferta-card { padding: 28px 24px; }
       .faq-question { font-size: 14px; padding: 16px 20px; }
       .faq-answer-inner { padding: 0 20px 16px; }
-      .zonas-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     /* Mobile — hasta 540px */
@@ -956,11 +874,6 @@
       .stat-number { font-size: 36px; }
 
 
-      /* Hero props — scrollable horizontal en móvil */
-      .hero-props { overflow-x: auto; justify-content: flex-start; padding-bottom: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-      .hero-props::-webkit-scrollbar { display: none; }
-      /* Zonas */
-      .zonas-grid { grid-template-columns: repeat(2, 1fr); }
       /* Form */
       .field-row { grid-template-columns: 1fr; }
       .form-card { padding: 24px 18px; }
@@ -1005,39 +918,6 @@
       <div class="hero-ctas">
         <a href="#form-section" class="btn btn-gold">Quiero ver el catálogo →</a>
       </div>
-      <p class="hero-props-label">Vista previa del catálogo</p>
-      <div class="hero-props">
-        <div class="hero-prop-card">
-          <div class="prop-thumb prop-thumb-1">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span class="prop-badge nueva">Nueva</span>
-          </div>
-          <div class="prop-info">
-            <div class="prop-price">$285,000</div>
-            <div class="prop-loc">Norcross, GA</div>
-          </div>
-        </div>
-        <div class="hero-prop-card">
-          <div class="prop-thumb prop-thumb-2">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span class="prop-badge remo">Remodelada</span>
-          </div>
-          <div class="prop-info">
-            <div class="prop-price">$320,000</div>
-            <div class="prop-loc">Duluth, GA</div>
-          </div>
-        </div>
-        <div class="hero-prop-card">
-          <div class="prop-thumb prop-thumb-3">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            <span class="prop-badge nueva">Nueva</span>
-          </div>
-          <div class="prop-info">
-            <div class="prop-price">$249,900</div>
-            <div class="prop-loc">Lawrenceville, GA</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="hero-scroll-hint">
@@ -1050,22 +930,18 @@
     <div class="container">
       <div class="stats-grid fade-up">
         <div class="stat-item">
-          <div class="stat-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div class="stat-number" data-target="200">0</div>
           <div class="stat-label">Familias que<br>ya tienen su casa</div>
         </div>
         <div class="stat-item">
-          <div class="stat-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <div class="stat-number" data-target="45" data-suffix=" días">0</div>
           <div class="stat-label">Tiempo promedio<br>para encontrar hogar</div>
         </div>
         <div class="stat-item">
-          <div class="stat-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
           <div class="stat-number" data-target="100" data-suffix="%">0</div>
           <div class="stat-label">Asesoría<br>en español</div>
         </div>
         <div class="stat-item">
-          <div class="stat-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
           <div class="stat-number" data-prefix="$" data-target="0">0</div>
           <div class="stat-label">Costo de la<br>asesoría inicial</div>
         </div>
@@ -1310,27 +1186,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── ZONAS ────────────────────────────────────────────────────────── -->
-  <section id="zonas" class="section">
-    <div class="container">
-      <p class="eyebrow">Dónde trabajamos</p>
-      <h2>Cubrimos todo Georgia</h2>
-      <p class="zonas-sub">Del norte metropolitano a los suburbios más buscados por familias</p>
-      <div class="zonas-grid fade-up">
-        <div class="zona-card"><div class="zona-icon">🏙</div><div class="zona-name">Atlanta</div><div class="zona-county">Fulton & DeKalb Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🏡</div><div class="zona-name">Norcross</div><div class="zona-county">Gwinnett Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🌳</div><div class="zona-name">Duluth</div><div class="zona-county">Gwinnett Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">⭐</div><div class="zona-name">Alpharetta</div><div class="zona-county">Fulton Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🏘</div><div class="zona-name">Lawrenceville</div><div class="zona-county">Gwinnett Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🌿</div><div class="zona-name">Marietta</div><div class="zona-county">Cobb Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🏠</div><div class="zona-name">Buford</div><div class="zona-county">Hall & Gwinnett Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🌲</div><div class="zona-name">Canton</div><div class="zona-county">Cherokee Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🏡</div><div class="zona-name">Woodstock</div><div class="zona-county">Cherokee Co.</div></div>
-        <div class="zona-card"><div class="zona-icon">🌟</div><div class="zona-name">Kennesaw</div><div class="zona-county">Cobb Co.</div></div>
       </div>
     </div>
   </section>
