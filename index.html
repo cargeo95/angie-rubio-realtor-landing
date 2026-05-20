@@ -679,70 +679,6 @@
     }
     .testi-dot.active { width: 30px; background: var(--gold); }
 
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .testi-card {
-      background: var(--white);
-      border: 1px solid #EBEBEB;
-      border-left: 4px solid var(--gold);
-      border-radius: 0 14px 14px 0;
-      padding: 22px 20px;
-      position: relative;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .testi-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-3px); }
-    .testi-stars {
-      color: var(--gold);
-      font-size: 14px;
-      margin-bottom: 16px;
-      letter-spacing: 3px;
-    }
-    .testi-card blockquote {
-      font-size: 15px;
-      color: var(--text-mid);
-      line-height: 1.8;
-      font-style: italic;
-      margin-bottom: 24px;
-      position: relative;
-    }
-    .testi-card blockquote::before {
-      content: '\201C';
-      font-family: Georgia, serif;
-      font-size: 56px;
-      color: var(--gold);
-      opacity: 0.2;
-      position: absolute;
-      top: -20px;
-      left: -8px;
-      line-height: 1;
-    }
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-top: 1px solid #F0F0F0;
-      padding-top: 18px;
-    }
-    .testi-avatar {
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 13px;
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-    .testi-name { font-weight: 700; font-size: 14px; color: var(--navy); }
-    .testi-city { font-size: 12px; color: var(--text-mid); margin-top: 2px; }
 
     /* ─── 7. FAQ ──────────────────────────────────────────────────── */
     #faq { background: var(--white); }
@@ -961,13 +897,11 @@
       .testi-figure img { height: 300px; min-height: 300px; }
       .testi-caption { left: 12px; right: 12px; bottom: 12px; padding: 10px 12px; }
       .testi-caption h3 { font-size: 20px; }
-      .testi-grid { grid-template-columns: 1fr; }
 
     }
 
     /* Mobile grande — 541 a 767px */
     @media (max-width: 767px) {
-      .testi-grid { max-width: 100%; }
       .oferta-card { padding: 28px 24px; }
       .faq-question { font-size: 14px; padding: 16px 20px; }
       .faq-answer-inner { padding: 0 20px 16px; }
@@ -1355,44 +1289,6 @@
           <button class="testi-btn" id="testiPrev" aria-label="Testimonio anterior">&#8592;</button>
           <div class="testi-dots" id="testiDots"></div>
           <button class="testi-btn" id="testiNext" aria-label="Siguiente testimonio">&#8594;</button>
-        </div>
-      </div>
-
-      <div class="testi-grid fade-up">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <blockquote>Angie nos ayud&oacute; a conseguir nuestra primera casa con un 3.5% de enganche. Pens&aacute;bamos que era imposible, pero ella nos gui&oacute; en cada paso. &iexcl;Ahora tenemos nuestra casa en Norcross!</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">ML</div>
-            <div>
-              <div class="testi-name">Mar&iacute;a &amp; Luis G.</div>
-              <div class="testi-city">Norcross, Georgia</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <blockquote>Todo el proceso fue en espa&ntilde;ol y muy claro. Angie encontr&oacute; el programa perfecto para nuestra situaci&oacute;n. En menos de 2 meses ya ten&iacute;amos las llaves de nuestra casa.</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">CR</div>
-            <div>
-              <div class="testi-name">Carlos R.</div>
-              <div class="testi-city">Duluth, Georgia</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <blockquote>No sab&iacute;amos por d&oacute;nde empezar. Angie nos explic&oacute; cada detalle del financiamiento, las zonas, las escuelas&hellip; Sin ella no lo hubi&eacute;ramos logrado. 100% recomendada.</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">AP</div>
-            <div>
-              <div class="testi-name">Ana &amp; Pedro M.</div>
-              <div class="testi-city">Lawrenceville, Georgia</div>
-            </div>
-          </div>
         </div>
       </div>
 
