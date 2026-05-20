@@ -50,8 +50,8 @@
       font-family: 'Inter', sans-serif;
       color: #1A1A1A;
       background: #fff;
-      overflow-x: hidden;
     }
+    .site-wrap { overflow-x: hidden; }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
 
@@ -855,7 +855,7 @@
     /* ─── FOOTER ──────────────────────────────────────────────────── */
     footer {
       background: #080F18;
-      padding: 32px 24px;
+      padding: 32px 24px max(32px, env(safe-area-inset-bottom, 32px));
       text-align: center;
     }
     footer .footer-logo {
@@ -969,8 +969,9 @@
 
       /* Form */
       .field-row { grid-template-columns: 1fr; }
-      .form-card { padding: 24px 18px; }
+      .form-card { padding: 24px 18px 40px; }
       .form-centered { padding: 0 8px; }
+      #form-section { padding-bottom: 80px; }
 
       /* Angie */
       .angie-photo { min-height: 45vh; }
@@ -997,6 +998,7 @@
   </style>
 </head>
 <body>
+<div class="site-wrap">
 
   <!-- ── 1. HERO ───────────────────────────────────────────────────── -->
   <section id="hero">
@@ -1437,7 +1439,7 @@
   <!-- ── 8. FORMULARIO ──────────────────────────────────────────────── -->
   <section id="form-section" class="section">
     <div class="container">
-      <div class="form-centered fade-up">
+      <div class="form-centered">
         <p class="eyebrow">Tu primer paso</p>
         <h2>Recibe el <span>catálogo</span> hoy</h2>
         <p class="form-intro">En menos de 24 horas en tu correo, con tu asesoría de 30 min incluida.</p>
@@ -1497,6 +1499,8 @@
     <br>
     <p style="font-size:11px;">© 2026 Angie Rubio Realtor. Todos los derechos reservados. &nbsp;·&nbsp; <a href="#">Política de privacidad</a></p>
   </footer>
+
+</div><!-- /site-wrap -->
 
   <!-- ── WHATSAPP FLOAT ──────────────────────────────────────────────── -->
   <a id="wa-float" href="https://wa.me/14704046256?text=Hola%20Angie%2C%20quiero%20ver%20el%20cat%C3%A1logo%20de%20propiedades%20en%20Georgia" target="_blank" rel="noopener" title="Escríbenos por WhatsApp">
