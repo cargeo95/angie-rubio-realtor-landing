@@ -100,70 +100,110 @@
 
 
     /* ─── 1. HERO ────────────────────────────────────────────────── */
+    /* ─── 1. HERO split ──────────────────────────────────────────── */
     #hero {
       position: relative;
       min-height: 100vh;
       min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
     }
-    #hero-video {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 1;
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      min-height: 100svh;
     }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(25,40,80,0.88) 0%,
-        rgba(25,40,80,0.70) 60%,
-        rgba(25,40,80,0.80) 100%
-      );
+
+    /* LEFT — navy, texto */
+    .hero-left {
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 80px 100px 80px;
+      position: relative;
       z-index: 2;
     }
-    /* Fallback background when no video */
-    .hero-bg-fallback {
+    .hero-left::after {
+      content: '';
       position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(135deg, rgba(25,40,80,0.92) 0%, rgba(25,40,80,0.76) 100%),
-        url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1400&q=80') center/cover no-repeat;
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
+      right: -56px;
+      top: 0; bottom: 0;
+      width: 112px;
+      background: linear-gradient(to right, var(--navy) 0%, transparent 100%);
       z-index: 3;
-      text-align: center;
-      max-width: 860px;
-      padding: 40px 24px;
+      pointer-events: none;
     }
-    .hero-content .eyebrow { font-size: 13px; letter-spacing: 4px; }
-    .hero-content h1 {
+    .hero-left h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(32px, 5.5vw, 60px);
+      font-size: clamp(26px, 3.8vw, 52px);
       font-weight: 900;
       color: var(--white);
       line-height: 1.12;
       margin-bottom: 20px;
     }
-    .hero-content h1 em {
-      font-style: normal;
-      color: var(--gold);
+    .hero-left h1 em { font-style: normal; color: var(--gold); }
+    .hero-left p {
+      font-size: clamp(15px, 1.5vw, 18px);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 460px;
     }
-    .hero-content p {
-      font-size: clamp(16px, 2vw, 19px);
-      color: rgba(255,255,255,0.85);
-      line-height: 1.65;
-      max-width: 680px;
-      margin: 0 auto 36px;
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* RIGHT — video ocupa la mitad completa */
+    .hero-right {
+      position: relative;
+      overflow: hidden;
     }
-.hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 180px;
+      background: linear-gradient(to right, var(--navy) 0%, transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: translateZ(0);
+      will-change: transform;
+      image-rendering: auto;
+    }
+
+    /* Isotipo badge flotante en la división */
+    .hero-badge {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 68px; height: 68px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 8px 28px rgba(184,134,60,0.55),
+        0 0 0 8px rgba(214,167,80,0.18),
+        0 0 0 18px rgba(214,167,80,0.07);
+    }
+    .hero-badge img {
+      width: 38px; height: 38px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
     .hero-scroll-hint {
       position: absolute;
       bottom: 32px;
@@ -569,47 +609,49 @@
         linear-gradient(180deg, #FFF8F5 0%, var(--cream) 100%);
       overflow: hidden;
     }
-    #testimonios .eyebrow { text-align: center; }
+    .testi-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .testi-left { display: flex; flex-direction: column; justify-content: center; }
+    #testimonios .eyebrow { text-align: left; }
     #testimonios h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(26px, 3.5vw, 40px);
+      font-size: clamp(26px, 3.5vw, 42px);
       font-weight: 800;
       color: var(--navy);
-      text-align: center;
+      text-align: left;
       margin-bottom: 18px;
     }
     .testi-intro {
-      max-width: 620px;
-      margin: 0 auto 24px;
-      text-align: center;
+      text-align: left;
       color: var(--text-mid);
       font-size: 16px;
       line-height: 1.75;
+      margin: 0;
     }
-    .testi-carousel { position: relative; max-width: 640px; margin: 0 auto; }
+    .testi-carousel { position: relative; }
     .testi-viewport {
       overflow: hidden;
       border-radius: 24px;
-      box-shadow: 0 22px 60px rgba(25,40,80,0.14);
-      background: rgba(255,255,255,0.65);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.75);
+      box-shadow: 0 22px 60px rgba(25,40,80,0.18);
     }
     .testi-track { display: flex; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
-    .testi-slide { min-width: 100%; padding: 12px; }
+    .testi-slide { min-width: 100%; padding: 0; }
     .testi-figure {
       position: relative;
       overflow: hidden;
-      border-radius: 18px;
+      border-radius: 24px;
       background: #F3E6E0;
-      min-height: 320px;
     }
     .testi-figure img {
       width: 100%;
-      height: 320px;
+      height: 520px;
       display: block;
       object-fit: cover;
-      object-position: center 75%;
+      object-position: center 65%;
     }
     .testi-caption {
       position: absolute;
@@ -639,16 +681,11 @@
     }
     .testi-caption h3 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(20px, 3vw, 28px);
+      font-size: clamp(18px, 2.5vw, 24px);
       font-weight: 800;
-      margin-bottom: 8px;
+      margin-bottom: 0;
     }
-    .testi-caption p {
-      color: rgba(255,255,255,0.82);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-    .testi-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 22px; }
+    .testi-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
     .testi-btn {
       width: 44px;
       height: 44px;
@@ -873,6 +910,16 @@
 
     /* Tablet — 768 a 900px */
     @media (max-width: 900px) {
+      /* Hero split → apila */
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-left { padding: 80px 32px 88px; text-align: center; }
+      .hero-left::after { display: none; }
+      .hero-left p { max-width: 100%; }
+      .hero-ctas { justify-content: center; }
+      .hero-right { min-height: 50vh; }
+      .hero-right::before { width: 100%; height: 120px; top: 0; bottom: auto; background: linear-gradient(to bottom, var(--navy) 0%, transparent 100%); }
+      .hero-badge { bottom: 50vh; top: auto; transform: translate(-50%, 50%); }
+
       /* Stats: 2x2 */
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -893,10 +940,11 @@
 
 
       /* Testimonios */
-      .testi-figure,
-      .testi-figure img { height: 300px; min-height: 300px; }
+      .testi-inner { grid-template-columns: 1fr; gap: 32px; }
+      #testimonios .eyebrow, #testimonios h2, .testi-intro { text-align: center; }
+      .testi-figure img { height: 380px; }
       .testi-caption { left: 12px; right: 12px; bottom: 12px; padding: 10px 12px; }
-      .testi-caption h3 { font-size: 20px; }
+      .testi-caption h3 { font-size: 18px; }
 
     }
 
@@ -933,6 +981,9 @@
       /* Oferta card */
       .oferta-card { padding: 24px 18px; }
 
+      /* Testimonios mobile */
+      .testi-figure img { height: 300px; }
+
       /* FAQ */
       .faq-question { font-size: 13px; padding: 14px 16px; }
       .faq-answer-inner { padding: 0 16px 14px; font-size: 14px; }
@@ -940,29 +991,37 @@
 
     /* Mobile pequeño — hasta 380px */
     @media (max-width: 380px) {
-      .hero-content { padding: 32px 16px; }
+      .hero-left { padding: 64px 20px 40px; }
       .container { padding: 0 16px; }
     }
   </style>
 </head>
 <body>
 
-
   <!-- ── 1. HERO ───────────────────────────────────────────────────── -->
   <section id="hero">
-    <!-- Reemplaza el src por tu video en loop -->
-    <video id="hero-video" autoplay muted loop playsinline>
-      <source src="assets/video/hero-video-4k.mp4" type="video/mp4">
-    </video>
-    <div class="hero-bg-fallback"></div>
-    <div class="hero-overlay"></div>
+    <div class="hero-inner">
 
-    <div class="hero-content">
-      <h1>Conoce nuestra <em>lista exclusiva</em> de propiedades nuevas y remodeladas en Georgia</h1>
-      <p>Accede al catálogo de propiedades para primera vivienda, segunda o tercera inversión, y recibe una asesoría personalizada 1-a-1 con Angie Rubio, sin costo.</p>
-      <div class="hero-ctas">
-        <a href="#form-section" class="btn btn-gold">Quiero ver el catálogo →</a>
+      <div class="hero-left">
+        <h1>Conoce nuestra <em>lista exclusiva</em> de propiedades nuevas y remodeladas en Georgia</h1>
+        <p>Accede al catálogo de propiedades para primera vivienda, segunda o tercera inversión, y recibe una asesoría personalizada 1-a-1 con Angie Rubio, sin costo.</p>
+        <div class="hero-ctas">
+          <a href="#form-section" class="btn btn-gold">Quiero ver el catálogo →</a>
+        </div>
       </div>
+
+      <div class="hero-right">
+        <div class="hero-video-wrap">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video/testi-video-01.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-badge">
+      <img src="assets/images/isotipo.png" alt="Angie Rubio Realtor">
     </div>
 
     <div class="hero-scroll-hint">
@@ -1192,11 +1251,16 @@
   <!-- Testimonials -->
   <section id="testimonios" class="section">
     <div class="container">
-      <p class="eyebrow">Familias que ya est&aacute;n en casa</p>
-      <h2>Lo que dicen nuestros clientes</h2>
-      <p class="testi-intro">Historias reales, momentos reales y resultados que ya se sienten como hogar. Aqu&iacute; la confianza se ve.</p>
+      <div class="testi-inner">
 
-      <div class="testi-carousel fade-up" id="testiCarousel">
+        <div class="testi-left fade-up">
+          <p class="eyebrow">Familias que ya est&aacute;n en casa</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+          <p class="testi-intro">Historias reales, momentos reales y resultados que ya se sienten como hogar. Aqu&iacute; la confianza se ve.</p>
+        </div>
+
+        <div class="testi-right fade-up">
+      <div class="testi-carousel" id="testiCarousel">
         <div class="testi-viewport">
           <div class="testi-track" id="testiTrack">
             <article class="testi-slide">
@@ -1291,7 +1355,9 @@
           <button class="testi-btn" id="testiNext" aria-label="Siguiente testimonio">&#8594;</button>
         </div>
       </div>
+        </div>
 
+      </div>
     </div>
   </section>
 
