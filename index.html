@@ -995,6 +995,105 @@
       .hero-left { padding: 64px 20px 40px; }
       .container { padding: 0 16px; }
     }
+
+    /* ── PROPIEDADES DISPONIBLES ──────────────────────────────────── */
+    #propiedades { background: #F5F5F5; }
+    /* Eyebrow en secciones de fondo claro — contraste WCAG AA */
+    #propiedades .eyebrow,
+    #testimonios .eyebrow,
+    #faq .eyebrow { color: #8B4A3A; }
+
+    .props-header { text-align: center; margin-bottom: 48px; }
+    .props-header h2 { margin-bottom: 12px; }
+    .props-header p { color: var(--text-mid); max-width: 520px; margin: 0 auto; }
+    .props-cta { text-align: center; margin-top: 40px; }
+    .props-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .prop-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+      transition: transform 0.22s, box-shadow 0.22s;
+      display: flex;
+      flex-direction: column;
+    }
+    .prop-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.14); }
+    .prop-photo { position: relative; }
+    .prop-photo img { width: 100%; height: 230px; object-fit: cover; display: block; }
+    .prop-price {
+      position: absolute; bottom: 14px; left: 14px;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 7px 16px;
+      border-radius: 50px;
+      letter-spacing: -0.3px;
+    }
+    .prop-body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+    .prop-address {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .prop-stats {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 14px;
+    }
+    .prop-stats strong { color: var(--text); }
+    .prop-stats .dot { color: var(--gold); font-size: 16px; }
+    .prop-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; flex: 1; align-content: flex-start; }
+    .prop-tag {
+      font-size: 11px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      padding: 5px 12px;
+      border-radius: 50px;
+      background: var(--cream);
+      color: var(--navy);
+      border: 1px solid rgba(25,40,80,0.14);
+      letter-spacing: 0.3px;
+    }
+    .prop-link {
+      display: block;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 13px 20px;
+      border-radius: 50px;
+      background: transparent;
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      transition: background 0.2s, color 0.2s;
+    }
+    .prop-link:hover { background: var(--navy); color: var(--white); }
+    .prop-badge-new {
+      position: absolute; top: 14px; right: 14px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 50px;
+    }
+    @media (max-width: 767px) {
+      .props-grid { gap: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -1008,7 +1107,7 @@
         <h1>Conoce nuestra <em>lista exclusiva</em> de propiedades nuevas y remodeladas en Georgia</h1>
         <p>Accede al catálogo exclusivo de propiedades para primera vivienda en Georgia, invertir en tu segunda o tercera propiedad y recibe una asesoría personalizada 1-a-1 con Angie Rubio, sin costo.</p>
         <div class="hero-ctas">
-          <a href="#form-section" class="btn btn-gold">Quiero ver el catálogo →</a>
+          <a href="#form-section" class="btn btn-gold">Quiero el catálogo completo →</a>
         </div>
       </div>
 
@@ -1080,7 +1179,7 @@
               <div>30 min de asesoría sin costo con Angie</div>
             </li>
           </ul>
-          <a href="#form-section" class="btn btn-gold">Quiero mi catálogo gratis →</a>
+          <a href="#form-section" class="btn btn-gold">Quiero el catálogo completo →</a>
         </div>
 
         <!-- Carrusel de planes -->
@@ -1155,7 +1254,102 @@
     </div>
   </section>
 
-  <!-- ── 4. SOBRE ANGIE ─────────────────────────────────────────────── -->
+  <!-- ── 4. PROPIEDADES DISPONIBLES ───────────────────────────────── -->
+  <section id="propiedades" class="section">
+    <div class="container">
+      <div class="props-header fade-up">
+        <p class="eyebrow">Vista previa</p>
+        <h2>Propiedades Disponibles</h2>
+      </div>
+
+      <div class="props-grid">
+
+        <!-- ── Propiedad 1: 480 Sugar Prairie Bnd ── -->
+        <article class="prop-card fade-up">
+          <div class="prop-photo">
+            <img src="assets/images/propiedades/480.png" alt="480 Sugar Prairie Bnd, Lawrenceville GA" loading="lazy" onerror="this.style.background='#e8e0d8';this.style.height='230px';this.removeAttribute('src')" />
+            <div class="prop-price">$560,000</div>
+          </div>
+          <div class="prop-body">
+            <p class="prop-address">480 Sugar Prairie Bnd, Lawrenceville, GA 30045</p>
+            <div class="prop-stats">
+              <span><strong>4</strong> hab.</span>
+              <span class="dot">·</span>
+              <span><strong>3</strong> baños</span>
+              <span class="dot">·</span>
+              <span><strong>3,200</strong> sqft</span>
+            </div>
+            <div class="prop-features">
+              <span class="prop-tag">Construida 2024</span>
+              <span class="prop-tag">$175/sqft</span>
+              <span class="prop-tag">HOA $38/mes</span>
+              <span class="prop-tag">Lote amplio</span>
+            </div>
+            <a href="https://www.zillow.com/homedetails/480-Sugar-Prairie-Bnd-Lawrenceville-GA-30045/345677483_zpid/" target="_blank" rel="noopener" class="prop-link">Ver propiedad en Zillow →</a>
+          </div>
+        </article>
+
+        <!-- ── Propiedad 2: 1758 Great Shoals Cir ── -->
+        <article class="prop-card fade-up">
+          <div class="prop-photo">
+            <img src="assets/images/propiedades/1758.png" alt="1758 Great Shoals Cir, Lawrenceville GA" loading="lazy" onerror="this.style.background='#e8e0d8';this.style.height='230px';this.removeAttribute('src')" />
+            <div class="prop-price">$549,900</div>
+          </div>
+          <div class="prop-body">
+            <p class="prop-address">1758 Great Shoals Cir, Lawrenceville, GA 30045</p>
+            <div class="prop-stats">
+              <span><strong>5</strong> hab.</span>
+              <span class="dot">·</span>
+              <span><strong>4</strong> baños</span>
+              <span class="dot">·</span>
+              <span><strong>4,262</strong> sqft</span>
+            </div>
+            <div class="prop-features">
+              <span class="prop-tag">Pisos de madera</span>
+              <span class="prop-tag">Cocina de chef</span>
+              <span class="prop-tag">Suite de lujo</span>
+              <span class="prop-tag">Hot tub incluido</span>
+              <span class="prop-tag">Garage 3 autos</span>
+              <span class="prop-tag">Comunidad con piscina</span>
+            </div>
+            <a href="https://www.zillow.com/homedetails/1758-Great-Shoals-Cir-Lawrenceville-GA-30045/87923185_zpid/" target="_blank" rel="noopener" class="prop-link">Ver propiedad en Zillow →</a>
+          </div>
+        </article>
+
+        <!-- ── Propiedad 3: 935 Waldwick Dr ── -->
+        <article class="prop-card fade-up">
+          <div class="prop-photo">
+            <img src="assets/images/propiedades/935.png" alt="935 Waldwick Dr, Lawrenceville GA" loading="lazy" onerror="this.style.background='#e8e0d8';this.style.height='230px';this.removeAttribute('src')" />
+            <div class="prop-price">$350,000</div>
+          </div>
+          <div class="prop-body">
+            <p class="prop-address">935 Waldwick Dr, Lawrenceville, GA 30045</p>
+            <div class="prop-stats">
+              <span><strong>3</strong> hab.</span>
+              <span class="dot">·</span>
+              <span><strong>2</strong> baños</span>
+              <span class="dot">·</span>
+              <span><strong>2,082</strong> sqft</span>
+            </div>
+            <div class="prop-features">
+              <span class="prop-tag">Lote 0.35 acres</span>
+              <span class="prop-tag">HOA $42/mes</span>
+              <span class="prop-tag">$168/sqft</span>
+              <span class="prop-tag">Est. $2,216/mes</span>
+            </div>
+            <a href="https://www.zillow.com/homedetails/935-Waldwick-Dr-Lawrenceville-GA-30045/58602269_zpid/" target="_blank" rel="noopener" class="prop-link">Ver propiedad en Zillow →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="props-cta fade-up">
+        <a href="#form-section" class="btn btn-gold">Ver catálogo completo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. SOBRE ANGIE ─────────────────────────────────────────────── -->
   <section id="angie">
     <div class="angie-inner">
 
@@ -1433,9 +1627,9 @@
   <section id="form-section" class="section">
     <div class="container">
       <div class="form-centered">
-        <p class="eyebrow">Tu primer paso</p>
-        <h2>Recibe el <span>catálogo</span> hoy</h2>
-        <p class="form-intro">En menos de 24 horas en tu correo, con tu asesoría de 30 min incluida.</p>
+        <p class="eyebrow">¿Te gustó lo que viste?</p>
+        <h2>Accede al <span>catálogo completo</span></h2>
+        <p class="form-intro">Estas son solo algunas propiedades. Cuéntanos tu presupuesto y zona, y Angie te envía opciones personalizadas para ti — más asesoría de 30 min incluida, sin costo.</p>
 
         <div class="form-card">
           <form id="lead-form" onsubmit="handleSubmit(event)">
@@ -1477,7 +1671,7 @@
 
             </div>
 
-            <button type="submit" class="btn-submit">Quiero mi catálogo gratis →</button>
+            <button type="submit" class="btn-submit">Quiero el catálogo completo →</button>
             <p class="form-microcopy">🔒 Tus datos están seguros · Sin spam · Solo te contacta Angie</p>
           </form>
         </div>
