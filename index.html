@@ -1094,6 +1094,87 @@
     @media (max-width: 767px) {
       .props-grid { gap: 20px; }
     }
+
+    /* ── PROP GALLERY (mini carrusel en tarjeta) ── */
+    .prop-photo { cursor: zoom-in; user-select: none; }
+    .prop-gallery-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      z-index: 4;
+      width: 32px; height: 32px;
+      background: rgba(0,0,0,0.42);
+      border: none; border-radius: 50%;
+      color: #fff; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: background 0.2s, opacity 0.2s;
+    }
+    .prop-photo:hover .prop-gallery-nav { opacity: 1; pointer-events: auto; }
+    .prop-gallery-nav:hover { background: rgba(0,0,0,0.7); }
+    .prop-gallery-nav.prev { left: 10px; }
+    .prop-gallery-nav.next { right: 10px; }
+    .prop-gallery-nav:disabled { opacity: 0 !important; pointer-events: none; }
+    .prop-gallery-dots {
+      position: absolute;
+      bottom: 56px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 5px; z-index: 4;
+    }
+    .prop-gallery-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      border: none; padding: 0; cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .prop-gallery-dot.active { background: #fff; transform: scale(1.4); }
+
+    /* ── LIGHTBOX ── */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.93);
+      align-items: center; justify-content: center; flex-direction: column;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox .lb-img {
+      max-width: 90vw; max-height: 82vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+      display: block;
+      pointer-events: none;
+    }
+    .lb-close {
+      position: absolute; top: 20px; right: 24px;
+      background: none; border: none;
+      color: #fff; font-size: 34px;
+      cursor: pointer; line-height: 1;
+      opacity: 0.75; transition: opacity 0.2s;
+    }
+    .lb-close:hover { opacity: 1; }
+    .lb-prev, .lb-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; width: 52px; height: 52px;
+      border-radius: 50%; font-size: 20px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.25); }
+    .lb-prev { left: 24px; }
+    .lb-next { right: 24px; }
+    .lb-prev:disabled, .lb-next:disabled { opacity: 0.2; cursor: default; }
+    .lb-counter {
+      color: rgba(255,255,255,0.55);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; letter-spacing: 1.5px;
+      margin-top: 14px;
+    }
+    @media (max-width: 540px) {
+      .lb-prev { left: 10px; } .lb-next { right: 10px; }
+      .lb-prev, .lb-next { width: 40px; height: 40px; font-size: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -1266,8 +1347,8 @@
 
         <!-- ── Propiedad 1: 480 Sugar Prairie Bnd ── -->
         <article class="prop-card fade-up">
-          <div class="prop-photo">
-            <img src="assets/images/propiedades/480.png" alt="480 Sugar Prairie Bnd, Lawrenceville GA" loading="lazy" onerror="this.style.background='#e8e0d8';this.style.height='230px';this.removeAttribute('src')" />
+          <div class="prop-photo" data-gallery='["assets/images/propiedades/480.png"]'>
+            <img src="assets/images/propiedades/480.png" alt="480 Sugar Prairie Bnd, Lawrenceville GA" loading="lazy" />
             <div class="prop-price">$560,000</div>
           </div>
           <div class="prop-body">
@@ -1285,14 +1366,13 @@
               <span class="prop-tag">HOA $38/mes</span>
               <span class="prop-tag">Lote amplio</span>
             </div>
-            <a href="https://www.zillow.com/homedetails/480-Sugar-Prairie-Bnd-Lawrenceville-GA-30045/345677483_zpid/" target="_blank" rel="noopener" class="prop-link">Ver propiedad en Zillow →</a>
           </div>
         </article>
 
         <!-- ── Propiedad 2: 1758 Great Shoals Cir ── -->
         <article class="prop-card fade-up">
-          <div class="prop-photo">
-            <img src="assets/images/propiedades/1758.png" alt="1758 Great Shoals Cir, Lawrenceville GA" loading="lazy" onerror="this.style.background='#e8e0d8';this.style.height='230px';this.removeAttribute('src')" />
+          <div class="prop-photo" data-gallery='["assets/images/propiedades/1758.png"]'>
+            <img src="assets/images/propiedades/1758.png" alt="1758 Great Shoals Cir, Lawrenceville GA" loading="lazy" />
             <div class="prop-price">$549,900</div>
           </div>
           <div class="prop-body">
@@ -1312,14 +1392,13 @@
               <span class="prop-tag">Garage 3 autos</span>
               <span class="prop-tag">Comunidad con piscina</span>
             </div>
-            <a href="https://www.zillow.com/homedetails/1758-Great-Shoals-Cir-Lawrenceville-GA-30045/87923185_zpid/" target="_blank" rel="noopener" class="prop-link">Ver propiedad en Zillow →</a>
           </div>
         </article>
 
         <!-- ── Propiedad 3: 935 Waldwick Dr ── -->
         <article class="prop-card fade-up">
-          <div class="prop-photo">
-            <img src="assets/images/propiedades/935.png" alt="935 Waldwick Dr, Lawrenceville GA" loading="lazy" onerror="this.style.background='#e8e0d8';this.style.height='230px';this.removeAttribute('src')" />
+          <div class="prop-photo" data-gallery='["assets/images/propiedades/935.png"]'>
+            <img src="assets/images/propiedades/935.png" alt="935 Waldwick Dr, Lawrenceville GA" loading="lazy" />
             <div class="prop-price">$350,000</div>
           </div>
           <div class="prop-body">
@@ -1337,7 +1416,6 @@
               <span class="prop-tag">$168/sqft</span>
               <span class="prop-tag">Est. $2,216/mes</span>
             </div>
-            <a href="https://www.zillow.com/homedetails/935-Waldwick-Dr-Lawrenceville-GA-30045/58602269_zpid/" target="_blank" rel="noopener" class="prop-link">Ver propiedad en Zillow →</a>
           </div>
         </article>
 
@@ -1830,6 +1908,136 @@
           : (current > 0 && goTo(current - 1));
       });
       goTo(0);
+    })();
+
+    /* ── Property Gallery + Lightbox ── */
+    (function() {
+      // Construir lightbox DOM
+      const lb = document.createElement('div');
+      lb.id = 'lightbox';
+      lb.setAttribute('role', 'dialog');
+      lb.setAttribute('aria-modal', 'true');
+      lb.innerHTML =
+        '<button class="lb-close" aria-label="Cerrar">&#x2715;</button>' +
+        '<button class="lb-prev" aria-label="Foto anterior">&#8592;</button>' +
+        '<img class="lb-img" src="" alt="Propiedad" />' +
+        '<button class="lb-next" aria-label="Siguiente foto">&#8594;</button>' +
+        '<div class="lb-counter"></div>';
+      document.body.appendChild(lb);
+
+      const lbImg     = lb.querySelector('.lb-img');
+      const lbPrev    = lb.querySelector('.lb-prev');
+      const lbNext    = lb.querySelector('.lb-next');
+      const lbClose   = lb.querySelector('.lb-close');
+      const lbCounter = lb.querySelector('.lb-counter');
+      let lbImages = [], lbIdx = 0;
+
+      function openLb(images, index) {
+        lbImages = images; lbIdx = index;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        updateLb();
+      }
+      function closeLb() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      function updateLb() {
+        lbImg.src = lbImages[lbIdx];
+        const single = lbImages.length === 1;
+        lbPrev.style.display = single ? 'none' : '';
+        lbNext.style.display = single ? 'none' : '';
+        lbCounter.style.display = single ? 'none' : '';
+        lbPrev.disabled = lbIdx === 0;
+        lbNext.disabled = lbIdx === lbImages.length - 1;
+        lbCounter.textContent = (lbIdx + 1) + ' / ' + lbImages.length;
+      }
+
+      lbClose.addEventListener('click', closeLb);
+      lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+      lbPrev.addEventListener('click', () => { if (lbIdx > 0) { lbIdx--; updateLb(); } });
+      lbNext.addEventListener('click', () => { if (lbIdx < lbImages.length - 1) { lbIdx++; updateLb(); } });
+
+      document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLb();
+        if (e.key === 'ArrowLeft'  && lbIdx > 0)                   { lbIdx--; updateLb(); }
+        if (e.key === 'ArrowRight' && lbIdx < lbImages.length - 1) { lbIdx++; updateLb(); }
+      });
+
+      // Swipe en lightbox
+      let lbSX = 0;
+      lbImg.addEventListener('touchstart', e => { lbSX = e.touches[0].clientX; }, { passive: true });
+      lbImg.addEventListener('touchend', e => {
+        const d = lbSX - e.changedTouches[0].clientX;
+        if (Math.abs(d) > 50) {
+          if (d > 0 && lbIdx < lbImages.length - 1) { lbIdx++; updateLb(); }
+          if (d < 0 && lbIdx > 0)                   { lbIdx--; updateLb(); }
+        }
+      });
+
+      // Inicializar cada tarjeta de propiedad
+      document.querySelectorAll('.prop-photo[data-gallery]').forEach(wrap => {
+        const images = JSON.parse(wrap.dataset.gallery);
+        const img = wrap.querySelector('img');
+        let current = 0;
+
+        if (images.length > 1) {
+          const prevBtn = document.createElement('button');
+          prevBtn.className = 'prop-gallery-nav prev';
+          prevBtn.innerHTML = '&#8592;';
+          prevBtn.setAttribute('aria-label', 'Foto anterior');
+
+          const nextBtn = document.createElement('button');
+          nextBtn.className = 'prop-gallery-nav next';
+          nextBtn.innerHTML = '&#8594;';
+          nextBtn.setAttribute('aria-label', 'Siguiente foto');
+
+          const dotsWrap = document.createElement('div');
+          dotsWrap.className = 'prop-gallery-dots';
+
+          images.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'prop-gallery-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Foto ' + (i + 1));
+            dot.addEventListener('click', e => { e.stopPropagation(); goTo(i); });
+            dotsWrap.appendChild(dot);
+          });
+
+          wrap.appendChild(prevBtn);
+          wrap.appendChild(nextBtn);
+          wrap.appendChild(dotsWrap);
+
+          function goTo(index) {
+            current = index;
+            img.src = images[current];
+            dotsWrap.querySelectorAll('.prop-gallery-dot').forEach((d, i) =>
+              d.classList.toggle('active', i === current)
+            );
+            prevBtn.disabled = current === 0;
+            nextBtn.disabled = current === images.length - 1;
+          }
+
+          prevBtn.addEventListener('click', e => { e.stopPropagation(); if (current > 0) goTo(current - 1); });
+          nextBtn.addEventListener('click', e => { e.stopPropagation(); if (current < images.length - 1) goTo(current + 1); });
+
+          // Swipe en tarjeta
+          let cardSX = 0;
+          wrap.addEventListener('touchstart', e => { cardSX = e.touches[0].clientX; }, { passive: true });
+          wrap.addEventListener('touchend', e => {
+            const d = cardSX - e.changedTouches[0].clientX;
+            if (Math.abs(d) > 40) {
+              if (d > 0 && current < images.length - 1) goTo(current + 1);
+              if (d < 0 && current > 0)                 goTo(current - 1);
+            }
+          });
+
+          goTo(0);
+        }
+
+        // Abrir lightbox al hacer clic en la imagen
+        wrap.addEventListener('click', () => openLb(images, current));
+      });
     })();
 
     /* ── Scroll fade-in ── */
