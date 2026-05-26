@@ -1133,47 +1133,83 @@
       display: none; position: fixed; inset: 0; z-index: 9999;
       background: rgba(0,0,0,0.93);
       align-items: center; justify-content: center; flex-direction: column;
+      opacity: 0; transition: opacity 0.28s ease;
     }
     #lightbox.open { display: flex; }
+    #lightbox.visible { opacity: 1; }
+    .lb-main {
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      width: 100%;
+    }
     #lightbox .lb-img {
-      max-width: 90vw; max-height: 82vh;
+      max-width: 88vw; max-height: 75vh;
       object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+      border-radius: 10px;
+      box-shadow: 0 32px 96px rgba(0,0,0,0.7);
       display: block;
       pointer-events: none;
+      transition: opacity 0.2s ease;
     }
+    #lightbox .lb-img.fading { opacity: 0; }
     .lb-close {
-      position: absolute; top: 20px; right: 24px;
-      background: none; border: none;
-      color: #fff; font-size: 34px;
+      position: absolute; top: 18px; right: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; font-size: 22px;
+      width: 44px; height: 44px; border-radius: 50%;
       cursor: pointer; line-height: 1;
-      opacity: 0.75; transition: opacity 0.2s;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0.8; transition: opacity 0.2s, background 0.2s;
     }
-    .lb-close:hover { opacity: 1; }
+    .lb-close:hover { opacity: 1; background: rgba(255,255,255,0.22); }
     .lb-prev, .lb-next {
       position: absolute; top: 50%; transform: translateY(-50%);
       background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.22);
       color: #fff; width: 52px; height: 52px;
       border-radius: 50%; font-size: 20px;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: background 0.2s;
+      z-index: 2;
     }
     .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.25); }
-    .lb-prev { left: 24px; }
-    .lb-next { right: 24px; }
-    .lb-prev:disabled, .lb-next:disabled { opacity: 0.2; cursor: default; }
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
+    .lb-prev:disabled, .lb-next:disabled { opacity: 0.18; cursor: default; }
     .lb-counter {
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.5);
       font-family: 'Montserrat', sans-serif;
-      font-size: 13px; letter-spacing: 1.5px;
-      margin-top: 14px;
+      font-size: 12px; letter-spacing: 1.5px;
+      margin-top: 10px;
     }
+    .lb-thumbs {
+      display: flex; gap: 8px;
+      margin-top: 14px;
+      padding: 0 12px;
+      max-width: 88vw;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .lb-thumbs::-webkit-scrollbar { display: none; }
+    .lb-thumb {
+      width: 62px; height: 46px; flex-shrink: 0;
+      border-radius: 6px; overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.5;
+      transition: opacity 0.2s, border-color 0.2s;
+    }
+    .lb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .lb-thumb.active { border-color: #fff; opacity: 1; }
+    .lb-thumb:hover { opacity: 0.85; }
     @media (max-width: 540px) {
-      .lb-prev { left: 10px; } .lb-next { right: 10px; }
-      .lb-prev, .lb-next { width: 40px; height: 40px; font-size: 16px; }
+      .lb-prev { left: 8px; } .lb-next { right: 8px; }
+      .lb-prev, .lb-next { width: 42px; height: 42px; font-size: 16px; }
+      .lb-close { top: 12px; right: 12px; width: 48px; height: 48px; font-size: 20px; }
+      #lightbox .lb-img { max-width: 92vw; max-height: 68vh; }
+      .lb-thumb { width: 52px; height: 38px; }
     }
   </style>
 </head>
@@ -1347,8 +1383,8 @@
 
         <!-- ── Propiedad 1: 480 Sugar Prairie Bnd ── -->
         <article class="prop-card fade-up">
-          <div class="prop-photo" data-gallery='["assets/images/propiedades/480.png"]'>
-            <img src="assets/images/propiedades/480.png" alt="480 Sugar Prairie Bnd, Lawrenceville GA" loading="lazy" />
+          <div class="prop-photo" data-gallery='["assets/images/propiedades/480/480.png","assets/images/propiedades/480/480_1.png","assets/images/propiedades/480/480_2.png","assets/images/propiedades/480/480_3.png","assets/images/propiedades/480/480_4.png"]'>
+            <img src="assets/images/propiedades/480/480.png" alt="480 Sugar Prairie Bnd, Lawrenceville GA" loading="lazy" />
             <div class="prop-price">$560,000</div>
           </div>
           <div class="prop-body">
@@ -1371,8 +1407,8 @@
 
         <!-- ── Propiedad 2: 1758 Great Shoals Cir ── -->
         <article class="prop-card fade-up">
-          <div class="prop-photo" data-gallery='["assets/images/propiedades/1758.png"]'>
-            <img src="assets/images/propiedades/1758.png" alt="1758 Great Shoals Cir, Lawrenceville GA" loading="lazy" />
+          <div class="prop-photo" data-gallery='["assets/images/propiedades/1758/1758.png","assets/images/propiedades/1758/1758_2.png","assets/images/propiedades/1758/1758_3.png","assets/images/propiedades/1758/1758_4.png","assets/images/propiedades/1758/1758_5.png"]'>
+            <img src="assets/images/propiedades/1758/1758.png" alt="1758 Great Shoals Cir, Lawrenceville GA" loading="lazy" />
             <div class="prop-price">$549,900</div>
           </div>
           <div class="prop-body">
@@ -1397,8 +1433,8 @@
 
         <!-- ── Propiedad 3: 935 Waldwick Dr ── -->
         <article class="prop-card fade-up">
-          <div class="prop-photo" data-gallery='["assets/images/propiedades/935.png"]'>
-            <img src="assets/images/propiedades/935.png" alt="935 Waldwick Dr, Lawrenceville GA" loading="lazy" />
+          <div class="prop-photo" data-gallery='["assets/images/propiedades/935/935.png","assets/images/propiedades/935/935_2.png","assets/images/propiedades/935/935_3.png","assets/images/propiedades/935/935_4.png","assets/images/propiedades/935/935_5.png"]'>
+            <img src="assets/images/propiedades/935/935.png" alt="935 Waldwick Dr, Lawrenceville GA" loading="lazy" />
             <div class="prop-price">$350,000</div>
           </div>
           <div class="prop-body">
@@ -1919,10 +1955,13 @@
       lb.setAttribute('aria-modal', 'true');
       lb.innerHTML =
         '<button class="lb-close" aria-label="Cerrar">&#x2715;</button>' +
-        '<button class="lb-prev" aria-label="Foto anterior">&#8592;</button>' +
-        '<img class="lb-img" src="" alt="Propiedad" />' +
-        '<button class="lb-next" aria-label="Siguiente foto">&#8594;</button>' +
-        '<div class="lb-counter"></div>';
+        '<div class="lb-main">' +
+          '<button class="lb-prev" aria-label="Foto anterior">&#8592;</button>' +
+          '<img class="lb-img" src="" alt="Propiedad" />' +
+          '<button class="lb-next" aria-label="Siguiente foto">&#8594;</button>' +
+        '</div>' +
+        '<div class="lb-counter"></div>' +
+        '<div class="lb-thumbs"></div>';
       document.body.appendChild(lb);
 
       const lbImg     = lb.querySelector('.lb-img');
@@ -1930,39 +1969,72 @@
       const lbNext    = lb.querySelector('.lb-next');
       const lbClose   = lb.querySelector('.lb-close');
       const lbCounter = lb.querySelector('.lb-counter');
+      const lbThumbs  = lb.querySelector('.lb-thumbs');
       let lbImages = [], lbIdx = 0;
 
       function openLb(images, index) {
         lbImages = images; lbIdx = index;
         lb.classList.add('open');
         document.body.style.overflow = 'hidden';
+        buildThumbs();
+        lbImg.src = lbImages[lbIdx];
         updateLb();
+        requestAnimationFrame(() => requestAnimationFrame(() => lb.classList.add('visible')));
       }
       function closeLb() {
-        lb.classList.remove('open');
-        document.body.style.overflow = '';
+        lb.classList.remove('visible');
+        setTimeout(() => {
+          lb.classList.remove('open');
+          document.body.style.overflow = '';
+        }, 280);
+      }
+      function buildThumbs() {
+        lbThumbs.innerHTML = '';
+        lbImages.forEach((src, i) => {
+          const t = document.createElement('button');
+          t.className = 'lb-thumb' + (i === lbIdx ? ' active' : '');
+          t.setAttribute('aria-label', 'Foto ' + (i + 1));
+          t.innerHTML = '<img src="' + src + '" alt="Foto ' + (i + 1) + '" />';
+          t.addEventListener('click', e => { e.stopPropagation(); goLb(i); });
+          lbThumbs.appendChild(t);
+        });
       }
       function updateLb() {
-        lbImg.src = lbImages[lbIdx];
         const single = lbImages.length === 1;
         lbPrev.style.display = single ? 'none' : '';
         lbNext.style.display = single ? 'none' : '';
         lbCounter.style.display = single ? 'none' : '';
+        lbThumbs.style.display = single ? 'none' : '';
         lbPrev.disabled = lbIdx === 0;
         lbNext.disabled = lbIdx === lbImages.length - 1;
         lbCounter.textContent = (lbIdx + 1) + ' / ' + lbImages.length;
+        lbThumbs.querySelectorAll('.lb-thumb').forEach((t, i) =>
+          t.classList.toggle('active', i === lbIdx)
+        );
+        const activeThumb = lbThumbs.children[lbIdx];
+        if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+      function goLb(index) {
+        if (index === lbIdx) return;
+        lbIdx = index;
+        lbImg.classList.add('fading');
+        setTimeout(() => {
+          lbImg.src = lbImages[lbIdx];
+          lbImg.onload = () => lbImg.classList.remove('fading');
+          updateLb();
+        }, 180);
       }
 
       lbClose.addEventListener('click', closeLb);
       lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-      lbPrev.addEventListener('click', () => { if (lbIdx > 0) { lbIdx--; updateLb(); } });
-      lbNext.addEventListener('click', () => { if (lbIdx < lbImages.length - 1) { lbIdx++; updateLb(); } });
+      lbPrev.addEventListener('click', () => { if (lbIdx > 0) goLb(lbIdx - 1); });
+      lbNext.addEventListener('click', () => { if (lbIdx < lbImages.length - 1) goLb(lbIdx + 1); });
 
       document.addEventListener('keydown', e => {
         if (!lb.classList.contains('open')) return;
         if (e.key === 'Escape') closeLb();
-        if (e.key === 'ArrowLeft'  && lbIdx > 0)                   { lbIdx--; updateLb(); }
-        if (e.key === 'ArrowRight' && lbIdx < lbImages.length - 1) { lbIdx++; updateLb(); }
+        if (e.key === 'ArrowLeft'  && lbIdx > 0)                   goLb(lbIdx - 1);
+        if (e.key === 'ArrowRight' && lbIdx < lbImages.length - 1) goLb(lbIdx + 1);
       });
 
       // Swipe en lightbox
@@ -1971,8 +2043,8 @@
       lbImg.addEventListener('touchend', e => {
         const d = lbSX - e.changedTouches[0].clientX;
         if (Math.abs(d) > 50) {
-          if (d > 0 && lbIdx < lbImages.length - 1) { lbIdx++; updateLb(); }
-          if (d < 0 && lbIdx > 0)                   { lbIdx--; updateLb(); }
+          if (d > 0 && lbIdx < lbImages.length - 1) goLb(lbIdx + 1);
+          if (d < 0 && lbIdx > 0)                   goLb(lbIdx - 1);
         }
       });
 
