@@ -1746,48 +1746,24 @@
         <p class="form-intro">Estas son solo algunas propiedades. Cuéntanos tu presupuesto y zona, y Angie te envía opciones personalizadas para ti — más asesoría de 30 min incluida, sin costo.</p>
 
         <div class="form-card">
-          <form id="lead-form" onsubmit="handleSubmit(event)">
-            <div class="field-group">
-
-              <div class="field">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
-              </div>
-
-              <div class="field-row">
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
-                </div>
-                <div class="field">
-                  <label for="whatsapp">WhatsApp</label>
-                  <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 (000) 000-0000" required />
-                </div>
-              </div>
-
-              <div class="field-row">
-                <div class="field">
-                  <label for="ciudad">Ciudad de interés</label>
-                  <input type="text" id="ciudad" name="ciudad" placeholder="Atlanta, Norcross..." required />
-                </div>
-                <div class="field">
-                  <label for="presupuesto">Presupuesto</label>
-                  <select id="presupuesto" name="presupuesto" required>
-                    <option value="" disabled selected>Tu rango</option>
-                    <option value="menos-150k">Menos de $150,000</option>
-                    <option value="150k-250k">$150,000 – $250,000</option>
-                    <option value="250k-350k">$250,000 – $350,000</option>
-                    <option value="350k-500k">$350,000 – $500,000</option>
-                    <option value="mas-500k">Más de $500,000</option>
-                  </select>
-                </div>
-              </div>
-
-            </div>
-
-            <button type="submit" class="btn-submit">Quiero el catálogo completo →</button>
-            <p class="form-microcopy">🔒 Tus datos están seguros · Sin spam · Solo te contacta Angie</p>
-          </form>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/z14hXKrMyBjzNP4zsiYg"
+            style="width:100%;height:463px;border:none;border-radius:8px"
+            id="inline-z14hXKrMyBjzNP4zsiYg"
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="CapturaDatos_26mayo"
+            data-height="463"
+            data-layout-iframe-id="inline-z14hXKrMyBjzNP4zsiYg"
+            data-form-id="z14hXKrMyBjzNP4zsiYg"
+            title="CapturaDatos_26mayo">
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
       </div>
     </div>
@@ -1852,15 +1828,6 @@
     });
 
     /* ── Form submit ── */
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.btn-submit');
-      btn.textContent = '✓ ¡Listo! Nos ponemos en contacto pronto';
-      btn.style.background = '#2A9D5C';
-      btn.disabled = true;
-      // Aquí conectas con GoHighLevel / webhook
-    }
-
     /* ── Carrusel de planes ── */
     (function() {
       const track   = document.getElementById('carouselTrack');
