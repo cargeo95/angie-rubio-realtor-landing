@@ -37,13 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    @font-face {
-      font-family: 'TheSeasons';
-      src: url('assets/fonts/theseasons-reg.otf') format('opentype');
-      font-weight: 400;
-      font-display: swap;
-    }
-    /* ─── RESET & BASE ─────────────────────────────────────────── */
+/* ─── RESET & BASE ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; width: 100%; }
@@ -186,6 +180,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center bottom;
       display: block;
       transform: translateZ(0);
       will-change: transform;
@@ -923,14 +918,18 @@
     /* Tablet — 768 a 900px */
     @media (max-width: 900px) {
       /* Hero split → apila */
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-left { padding: 80px 32px 88px; text-align: center; }
+      #hero { min-height: auto; }
+      .hero-inner { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 48px 22px 32px; text-align: center; z-index: 2; }
       .hero-left::after { display: none; }
-      .hero-left p { max-width: 100%; }
+      .hero-left p { max-width: 100%; margin-bottom: 24px; }
       .hero-ctas { justify-content: center; }
-      .hero-right { min-height: 50vh; }
-      .hero-right::before { width: 100%; height: 120px; top: 0; bottom: auto; background: linear-gradient(to bottom, var(--navy) 0%, transparent 100%); }
-      .hero-badge { bottom: 50vh; top: auto; transform: translate(-50%, 50%); }
+      .hero-right { position: relative; height: 600px; min-height: unset; max-height: unset; overflow: hidden; }
+      .hero-right::before { display: none; }
+      .hero-video-wrap { position: absolute; inset: 0; overflow: hidden; }
+      .hero-video-wrap video { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+      .hero-badge { display: none; }
+      .hero-scroll-hint { display: none; }
 
       /* Stats: 2x2 */
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -972,8 +971,11 @@
       .section { padding: 56px 0; }
 
       /* Hero */
+      .hero-left h1 { font-size: 32px; line-height: 1.12; }
+      .hero-left p { font-size: 14px; line-height: 1.6; }
+      .hero-right { height: 420px; }
       .hero-ctas { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; margin-left: auto; margin-right: auto; }
-      .hero-ctas .btn { width: 100%; text-align: center; }
+      .hero-ctas .btn { width: 100%; font-size: 14px; padding: 14px 20px; }
 
       /* Stats */
       .stat-number { font-size: 36px; }
@@ -1243,7 +1245,7 @@
       <div class="hero-right">
         <div class="hero-video-wrap">
           <video autoplay muted loop playsinline>
-            <source src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600bbd2d32f434129b613.mp4" type="video/mp4">
+            <source src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a17d36d8c6ee94929ab4076.mp4" type="video/mp4">
           </video>
         </div>
       </div>

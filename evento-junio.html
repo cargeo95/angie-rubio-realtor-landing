@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evento Angie Rubio — 20 de Junio · ¿Calificas para comprar casa este año?</title>
+  <meta name="description" content="Evento gratuito el 20 de junio en Atlanta. En menos de 2 horas descubres si hoy calificas para comprar tu casa — con tu crédito real y tus ingresos reales. Solo 26 cupos." />
+  <meta name="theme-color" content="#0D1B2A" />
+
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Evento Angie Rubio · 20 de Junio — ¿Calificas para comprar casa este año?" />
+  <meta property="og:description" content="Evento gratuito en Atlanta. Descubre en menos de 2 horas si hoy puedes comprar tu casa. Solo 26 cupos." />
+  <meta property="og:image"       content="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c75e09acb033d821f7.png" />
+  <meta property="og:locale"      content="es_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Evento Angie Rubio · 20 de Junio" />
+  <meta name="twitter:description" content="Evento gratuito. 26 cupos. Descubre si calificas para comprar casa este año en Atlanta." />
+  <meta name="twitter:image"       content="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c75e09acb033d821f7.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c75e09acb033d821f7.png" />
+  <link rel="apple-touch-icon"     href="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c75e09acb033d821f7.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+/* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { margin: 0; padding: 0; width: 100%; }
+    html { scroll-behavior: smooth; }
+
+    .ghl-breakout {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1A1A1A;
+      background: #fff;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+/* ─── VARIABLES ─────────────────────────────────────────────── */
+    :root {
+      --gold:     #D6A796;
+      --gold-lt:  #E4B8AA;
+      --navy:     #192850;
+      --navy-2:   #24345F;
+      --cream:    #F8F4EE;
+      --gray-lt:  #F2F2F2;
+      --text:     #1A1A1A;
+      --text-mid: #4A4A4A;
+      --white:    #FFFFFF;
+      --radius:   12px;
+      --shadow:   0 8px 32px rgba(0,0,0,0.12);
+    }
+
+/* ─── UTILITIES ─────────────────────────────────────────────── */
+    .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .btn {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      border: none;
+      text-align: center;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(214,167,150,0.28); }
+    .btn-gold  { background: var(--gold); color: var(--navy); }
+    .btn-gold:hover { background: var(--gold-lt); }
+    .btn-navy  { background: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--navy-2); }
+
+/* ─── FADE ANIMATIONS ───────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.delay-1 { transition-delay: 0.1s; }
+    .fade-up.delay-2 { transition-delay: 0.2s; }
+    .fade-up.delay-3 { transition-delay: 0.3s; }
+    .fade-up.delay-4 { transition-delay: 0.4s; }
+
+/* ─── 1. HERO ────────────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #07101E;
+    }
+
+    /* Stadium floodlights — CSS atmosphere (z-index 2: sobre overlay, bajo contenido) */
+    .hero-lights {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-light { position: absolute; border-radius: 50%; }
+    .hero-light-1 {
+      top: -15%; left: -8%;
+      width: 60%; height: 60%;
+      background: radial-gradient(circle, rgba(214,167,80,0.22) 0%, transparent 65%);
+      filter: blur(70px);
+    }
+    .hero-light-2 {
+      top: -20%; right: -5%;
+      width: 52%; height: 55%;
+      background: radial-gradient(circle, rgba(214,167,80,0.14) 0%, transparent 65%);
+      filter: blur(80px);
+    }
+    .hero-light-3 {
+      bottom: -10%; left: 50%;
+      transform: translateX(-50%);
+      width: 70%; height: 45%;
+      background: radial-gradient(circle, rgba(25,40,80,0.6) 0%, transparent 70%);
+      filter: blur(60px);
+    }
+
+    /* Content */
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 40px 56px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Pill badge */
+    .hero-event-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(214,167,150,0.12);
+      border: 1px solid rgba(214,167,150,0.28);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .hero-event-tag .dot-live {
+      width: 7px; height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulseDot 1.5s infinite;
+    }
+    @keyframes pulseDot {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.4; transform: scale(1.5); }
+    }
+
+    /* Main headline */
+    .hero-headline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(30px, 4.5vw, 58px);
+      font-weight: 900;
+      color: rgba(255,255,255,0.93);
+      line-height: 1.13;
+      margin-bottom: 24px;
+      max-width: 760px;
+    }
+
+    /* Gold line divider */
+    .hero-divider {
+      width: 64px;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+
+    /* 65% stat block */
+    .hero-stat-wrap {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .hero-stat-pct {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(80px, 13vw, 148px);
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 0.85;
+      letter-spacing: -6px;
+      flex-shrink: 0;
+    }
+    .hero-stat-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .hero-stat-pre {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+    }
+    .hero-stat-copy {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 2.2vw, 26px);
+      font-weight: 700;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.4;
+    }
+
+    /* Question */
+    .hero-question {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(20px, 2.8vw, 36px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 28px;
+      max-width: 720px;
+    }
+    .hero-question em { font-style: normal; color: var(--gold); }
+
+    /* CTA */
+    /* Hero video background */
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-video-bg video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(7,16,30,0.84) 0%,
+        rgba(7,16,30,0.78) 50%,
+        rgba(7,16,30,0.88) 100%
+      );
+      z-index: 1;
+    }
+
+    /* CTA */
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+
+    /* Countdown */
+    .countdown-wrap {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      width: 100%;
+    }
+    .countdown-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 16px;
+    }
+    .countdown {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .cd-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .cd-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 900;
+      color: var(--white);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 10px 16px;
+      min-width: 66px;
+      text-align: center;
+      line-height: 1;
+    }
+    .cd-label {
+      font-size: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .cd-sep {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--gold);
+      padding-top: 10px;
+      opacity: 0.5;
+    }
+
+    /* Scroll hint */
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      opacity: 0.4;
+    }
+    .scroll-arrow {
+      width: 20px; height: 20px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+      animation: scrollBounce 1.5s infinite;
+    }
+    @keyframes scrollBounce {
+      0%,100% { transform: rotate(45deg) translateY(0); }
+      50%      { transform: rotate(45deg) translateY(5px); }
+    }
+
+/* ─── 2. DOLOR ───────────────────────────────────────────────── */
+    #dolor {
+      background: var(--cream);
+    }
+    .dolor-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #dolor .eyebrow { color: #8B4A3A; text-align: center; }
+    #dolor h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 40px;
+    }
+    .dolor-quotes {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .dolor-quote {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 28px;
+      text-align: left;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .dolor-quote p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .dolor-quote span {
+      display: block;
+      font-size: 13px;
+      color: var(--text-mid);
+      margin-top: 4px;
+      font-style: italic;
+    }
+    .dolor-reveal {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .dolor-reveal p {
+      font-size: clamp(16px, 1.6vw, 19px);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .dolor-reveal p:last-child { margin-bottom: 0; }
+    .dolor-reveal strong { color: var(--gold); }
+
+/* ─── 3. QUÉ APRENDES ───────────────────────────────────────── */
+    #aprendes {
+      background: var(--navy);
+    }
+    .aprendes-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    #aprendes .eyebrow { text-align: center; }
+    #aprendes h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    #aprendes h2 em { font-style: normal; color: var(--gold); }
+    .aprendes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .aprende-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .aprende-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(214,167,150,0.35);
+    }
+    .aprende-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .aprende-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.35;
+    }
+    .aprende-card h3 em { font-style: normal; color: var(--gold); }
+
+/* ─── 4. URGENCIA ───────────────────────────────────────────── */
+    #urgencia {
+      background: var(--white);
+    }
+    .urgencia-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .urgencia-text .eyebrow { color: #8B4A3A; }
+    .urgencia-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .urgencia-text p {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .urgencia-stats {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+    .u-stat {
+      text-align: center;
+    }
+    .u-stat .big {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(44px, 5vw, 64px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+      display: block;
+    }
+    .u-stat .big span { color: var(--gold); }
+    .u-stat .small {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.4;
+      margin-top: 4px;
+      display: block;
+    }
+    .u-divider {
+      width: 1px;
+      background: #E5E5E5;
+      align-self: stretch;
+    }
+
+    /* Seats grid */
+    .seats-wrap {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+    }
+    .seats-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .seats-sub {
+      font-size: 13px;
+      color: var(--text-mid);
+      margin-bottom: 24px;
+    }
+    .seats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .seat {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .seat.taken {
+      background: rgba(25,40,80,0.12);
+      color: rgba(25,40,80,0.35);
+      font-size: 11px;
+    }
+    .seat.open {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 2px 8px rgba(214,167,150,0.4);
+    }
+    .seats-legend {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-mid);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-dot {
+      width: 14px; height: 14px;
+      border-radius: 4px;
+    }
+    .legend-dot.taken  { background: rgba(25,40,80,0.12); }
+    .legend-dot.open   { background: var(--gold); }
+
+/* ─── 5. TRIPLE CONVERGENCIA ────────────────────────────────── */
+    #triple {
+      background: linear-gradient(160deg, #F8F4EE 0%, #F0EAE2 100%);
+    }
+    .triple-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    #triple .eyebrow { color: #8B4A3A; }
+    #triple h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .triple-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .triple-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      border-top: 4px solid transparent;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .triple-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+    .triple-card:nth-child(2) { border-top-color: var(--gold); }
+    .triple-date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .triple-card .triple-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .triple-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .triple-card p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+    .triple-card.featured {
+      background: var(--navy);
+    }
+    .triple-card.featured .triple-date { color: var(--gold); }
+    .triple-card.featured h3 { color: var(--white); }
+    .triple-card.featured p  { color: rgba(255,255,255,0.65); }
+
+/* ─── 6. ANGIE ───────────────────────────────────────────────── */
+    #angie {
+      background: var(--white);
+      padding: 0;
+      overflow: hidden;
+    }
+    .angie-inner {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 0;
+      height: 80vh;
+      max-height: 80vh;
+      overflow: hidden;
+    }
+    .angie-photo-wrap {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    .angie-photo { width: 100%; height: 100%; }
+    .angie-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+    .angie-badge-float {
+      position: absolute;
+      bottom: 32px;
+      right: 24px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 14px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .angie-badge-float .big   { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; display: block; }
+    .angie-badge-float .small { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .angie-text {
+      padding: 48px 56px 48px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .angie-text .eyebrow { color: #8B4A3A; }
+    .angie-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(24px, 2.8vw, 38px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .angie-text p {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .check-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+/* ─── 7. TESTIMONIOS ────────────────────────────────────────── */
+    #testimonios {
+      background:
+        radial-gradient(circle at top left, rgba(214,167,150,0.14), transparent 34%),
+        linear-gradient(180deg, #FFF8F5 0%, var(--cream) 100%);
+      overflow: hidden;
+    }
+    .testi-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .testi-left { display: flex; flex-direction: column; justify-content: center; }
+    #testimonios .eyebrow { text-align: left; color: #8B4A3A; }
+    #testimonios h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 800;
+      color: var(--navy);
+      text-align: left;
+      margin-bottom: 18px;
+    }
+    .testi-intro { text-align: left; color: var(--text-mid); font-size: 16px; line-height: 1.75; }
+    .testi-carousel { position: relative; }
+    .testi-viewport {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 22px 60px rgba(25,40,80,0.18);
+    }
+    .testi-track { display: flex; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+    .testi-slide { min-width: 100%; padding: 0; }
+    .testi-figure {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #F3E6E0;
+    }
+    .testi-figure img {
+      width: 100%;
+      height: 520px;
+      display: block;
+      object-fit: cover;
+      object-position: center 65%;
+    }
+    .testi-caption {
+      position: absolute;
+      left: 16px; right: 16px; bottom: 16px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(25,40,80,0.12) 0%, rgba(25,40,80,0.82) 100%);
+      color: var(--white);
+    }
+    .testi-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #FFF4EF;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .testi-caption h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 800;
+    }
+    .testi-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
+    .testi-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(25,40,80,0.14);
+      background: rgba(255,255,255,0.82);
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: transform 0.2s, background 0.2s, color 0.2s;
+      box-shadow: 0 10px 24px rgba(25,40,80,0.08);
+    }
+    .testi-btn:hover { transform: translateY(-2px); background: var(--navy); color: var(--white); }
+    .testi-btn:disabled { opacity: 0.35; cursor: default; transform: none; }
+    .testi-dots { display: flex; align-items: center; gap: 8px; }
+    .testi-dot {
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(25,40,80,0.18);
+      cursor: pointer;
+      padding: 0;
+      transition: width 0.2s, background 0.2s;
+    }
+    .testi-dot.active { width: 30px; background: var(--gold); }
+
+/* ─── 8. CTA / REGISTRO ─────────────────────────────────────── */
+    #registro { background: var(--navy); }
+    .registro-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .registro-left h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+    .registro-left h2 em { font-style: normal; color: var(--gold); }
+    .registro-left p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+    .registro-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .registro-perks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+    }
+    .perk-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .registro-right {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    }
+    .registro-right h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 6px;
+    }
+    .registro-right .sub {
+      font-size: 14px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .registro-cta-btn {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .registro-cta-btn:hover { background: var(--gold-lt); transform: translateY(-2px); }
+    .registro-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .registro-field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .registro-field label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .registro-field input {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1.5px solid #E0E0E0;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .registro-field input:focus { border-color: var(--gold); }
+    .registro-field input::placeholder { color: #BDBDBD; }
+    .registro-microcopy {
+      font-size: 12px;
+      color: var(--text-mid);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+/* ─── 9. FAQ ──────────────────────────────────────────────────── */
+    #faq { background: var(--cream); }
+    #faq .eyebrow { text-align: center; color: #8B4A3A; }
+    #faq h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1px solid #E5E5E5;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      text-align: left;
+      gap: 16px;
+    }
+    .faq-question:hover { background: var(--gray-lt); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 400;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); color: var(--navy); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.75;
+    }
+    .faq-answer-inner { padding: 0 24px 20px; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+/* ─── FOOTER ──────────────────────────────────────────────────── */
+    footer {
+      background: #080F18;
+      padding: 32px 24px max(32px, env(safe-area-inset-bottom, 32px));
+      text-align: center;
+    }
+    footer .footer-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    footer .footer-logo span { color: var(--gold); }
+    footer p { font-size: 13px; color: rgba(255,255,255,0.4); }
+    footer a { color: rgba(255,255,255,0.5); }
+    footer a:hover { color: var(--gold); }
+
+/* ─── WHATSAPP FLOAT ──────────────────────────────────────────── */
+    #wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 998;
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: transform 0.2s;
+    }
+    #wa-float:hover { transform: scale(1.1); }
+    #wa-float svg { width: 28px; height: 28px; fill: white; }
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-content { padding: 64px 28px 64px; }
+      .hero-stat-wrap { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+      .hero-stat-text { align-items: center; }
+      .hero-scroll-hint { display: none; }
+
+      .aprendes-grid { grid-template-columns: 1fr; }
+      .triple-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+
+      .urgencia-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      .testi-inner { grid-template-columns: 1fr; gap: 32px; }
+      #testimonios .eyebrow, #testimonios h2, .testi-intro { text-align: center; }
+      .testi-figure img { height: 400px; }
+
+      .angie-inner { grid-template-columns: 1fr; height: auto; max-height: none; }
+      .angie-photo { height: 50vh; }
+      .angie-text { padding: 48px 32px; }
+
+      .registro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .registro-left { text-align: center; }
+      .registro-left h2 { font-size: clamp(28px, 5vw, 40px); }
+      .registro-perks { max-width: 480px; margin: 0 auto 32px; text-align: left; }
+    }
+
+    @media (max-width: 767px) {
+      .dolor-reveal { padding: 28px 22px; }
+      .urgencia-stats { gap: 16px; }
+      .triple-grid { max-width: 100%; }
+    }
+
+    @media (max-width: 540px) {
+      .section { padding: 56px 0; }
+
+      /* Hero */
+      .hero-content { padding: 48px 20px 48px; }
+      .hero-stat-pct { font-size: 88px; letter-spacing: -3px; }
+      .hero-stat-copy { font-size: 17px; }
+      .hero-headline { font-size: 28px; }
+      .hero-question { font-size: 20px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; width: 100%; max-width: 300px; }
+      .hero-ctas .btn { width: 100%; font-size: 14px; padding: 14px 20px; }
+      .countdown { gap: 8px; }
+      .cd-num { min-width: 52px; font-size: 24px; padding: 8px 10px; }
+      .cd-sep { font-size: 20px; }
+
+      /* Dolor */
+      .dolor-quote { padding: 16px 20px; }
+      .dolor-reveal { padding: 24px 18px; }
+
+      /* Aprendes */
+      .aprende-card { padding: 24px 20px; }
+      .aprende-card h3 { font-size: 16px; }
+
+      /* Triple */
+      .triple-card { padding: 28px 20px; }
+
+      /* Angie */
+      .angie-photo { height: 45vh; }
+      .angie-text { padding: 36px 20px; }
+      .angie-badge-float { padding: 12px 16px; bottom: 16px; right: 16px; }
+      .angie-badge-float .big { font-size: 22px; }
+      .angie-badge-float .small { font-size: 10px; }
+
+      /* Testimonios */
+      .testi-figure img { height: 300px; }
+      .testi-caption { left: 10px; right: 10px; bottom: 10px; padding: 10px 12px; }
+      .testi-caption h3 { font-size: 17px; }
+
+      /* Registro */
+      .registro-right { padding: 28px 18px 32px; }
+      .registro-field input { font-size: 14px; padding: 12px 13px; }
+
+      /* FAQ */
+      .faq-question { font-size: 14px; padding: 16px 18px; }
+      .faq-answer-inner { padding: 0 18px 16px; font-size: 14px; }
+    }
+
+    @media (max-width: 380px) {
+      .container { padding: 0 16px; }
+      .hero-content { padding: 40px 16px 40px; }
+      .hero-stat-pct { font-size: 76px; }
+      .cd-num { min-width: 44px; font-size: 22px; padding: 7px 8px; }
+      .urgencia-stats { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .u-divider { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="ghl-breakout">
+
+  <!-- ── 1. HERO ───────────────────────────────────────────────────── -->
+  <section id="hero">
+
+    <!-- Video de fondo con overlay oscuro -->
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a17d36d8c6ee94929ab4076.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-video-overlay"></div>
+
+    <!-- Stadium floodlights atmosphere (CSS) -->
+    <div class="hero-lights">
+      <div class="hero-light hero-light-1"></div>
+      <div class="hero-light hero-light-2"></div>
+      <div class="hero-light hero-light-3"></div>
+    </div>
+
+    <div class="hero-content">
+
+      <h1 class="hero-headline">
+        Este verano el mundo entero<br>viene a jugar a USA.
+      </h1>
+
+      <div class="hero-divider"></div>
+
+      <div class="hero-stat-wrap">
+        <span class="hero-stat-pct">65%</span>
+        <div class="hero-stat-text">
+          <span class="hero-stat-pre">Y el</span>
+          <span class="hero-stat-copy">de las familias van a verlo<br>desde una casa que no es suya.</span>
+        </div>
+      </div>
+
+      <div class="hero-divider"></div>
+
+      <p class="hero-question">
+        ¿Vas a ser parte de ese 65%...<br>
+        o <em>das el paso el 20 de junio?</em>
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#registro" class="btn btn-gold">Reserva tu cupo — es gratis &nbsp;→</a>
+      </div>
+
+      <div class="countdown-wrap">
+        <div class="countdown-label">El evento empieza en</div>
+        <div class="countdown" id="countdown">
+          <div class="cd-item">
+            <div class="cd-num" id="cd-days">--</div>
+            <div class="cd-label">Días</div>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item">
+            <div class="cd-num" id="cd-hours">--</div>
+            <div class="cd-label">Horas</div>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item">
+            <div class="cd-num" id="cd-mins">--</div>
+            <div class="cd-label">Min</div>
+          </div>
+          <div class="cd-sep">:</div>
+          <div class="cd-item">
+            <div class="cd-num" id="cd-secs">--</div>
+            <div class="cd-label">Seg</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ── 2. DOLOR ──────────────────────────────────────────────────── -->
+  <section id="dolor" class="section">
+    <div class="container">
+      <div class="dolor-inner fade-up">
+        <p class="eyebrow">¿Te suena familiar?</p>
+        <h2>¿Cuántos años llevas<br>diciéndote esto?</h2>
+
+        <div class="dolor-quotes">
+          <div class="dolor-quote">
+            <p>"Cuando mejore mi crédito."</p>
+          </div>
+          <div class="dolor-quote">
+            <p>"Cuando ahorre más."</p>
+          </div>
+          <div class="dolor-quote">
+            <p>"Cuando las cosas estén más estables."</p>
+          </div>
+        </div>
+
+        <div class="dolor-reveal">
+          <p>¿Sabes cuántos años llevan diciéndose eso las familias que hoy <strong>todavía no tienen su casa?</strong></p>
+          <p>El problema nunca fue el crédito. Fue <strong>no saber exactamente qué necesitaban para empezar.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. QUÉ APRENDES ───────────────────────────────────────────── -->
+  <section id="aprendes" class="section">
+    <div class="container">
+      <div class="aprendes-header fade-up">
+        <p class="eyebrow">En menos de 2 horas</p>
+        <h2>El 20 de junio sabes<br><em>exactamente dónde estás</em></h2>
+      </div>
+
+      <div class="aprendes-grid">
+
+        <div class="aprende-card fade-up delay-1">
+          <div class="aprende-num">1</div>
+          <h3>Si hoy calificas —<br><em>con tu crédito real,<br>tus ingresos reales</em></h3>
+        </div>
+
+        <div class="aprende-card fade-up delay-2">
+          <div class="aprende-num">2</div>
+          <h3>Cuánto dinero necesitas<br><em>exactamente</em><br>para empezar</h3>
+        </div>
+
+        <div class="aprende-card fade-up delay-3">
+          <div class="aprende-num">3</div>
+          <h3>Qué casas puedes comprar<br>en Atlanta<br><em>con lo que tienes hoy</em></h3>
+        </div>
+
+        <div class="aprende-card fade-up delay-4">
+          <div class="aprende-num">4</div>
+          <h3>Qué te falta si todavía<br>no llegas — y<br><em>cuánto tiempo te toma</em></h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. URGENCIA ───────────────────────────────────────────────── -->
+  <section id="urgencia" class="section">
+    <div class="container">
+      <div class="urgencia-inner">
+
+        <div class="urgencia-text fade-up">
+          <p class="eyebrow">Hay algo que sí es escaso</p>
+          <h2>8 de cada 10 personas descubren que estaban más cerca de lo que pensaban</h2>
+          <p>Angie no trabaja con auditorios de 200 personas. Trabaja contigo. Por eso hay <strong>26 cupos</strong> y cuando se van, se van.</p>
+
+          <div class="urgencia-stats">
+            <div class="u-stat">
+              <span class="big">80<span>%</span></span>
+              <span class="small">Descubren que<br>estaban listos</span>
+            </div>
+            <div class="u-divider"></div>
+            <div class="u-stat">
+              <span class="big">26</span>
+              <span class="small">Cupos totales.<br>Sin excepciones.</span>
+            </div>
+          </div>
+
+          <a href="#registro" class="btn btn-gold">Quiero saber si soy del 35% &nbsp;→</a>
+        </div>
+
+        <div class="seats-wrap fade-up delay-2">
+          <div class="seats-title">Cupos del evento</div>
+          <div class="seats-sub">Algunos ya están reservados</div>
+
+          <div class="seats-grid">
+            <!-- 19 tomados, 7 disponibles -->
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <span class="seat taken" title="Reservado">✕</span>
+            <!-- 7 disponibles -->
+            <span class="seat open" title="Disponible">★</span>
+            <span class="seat open" title="Disponible">★</span>
+            <span class="seat open" title="Disponible">★</span>
+            <span class="seat open" title="Disponible">★</span>
+            <span class="seat open" title="Disponible">★</span>
+            <span class="seat open" title="Disponible">★</span>
+            <span class="seat open" title="Disponible">★</span>
+          </div>
+
+          <div class="seats-legend">
+            <div class="legend-item">
+              <div class="legend-dot taken"></div>
+              <span>Reservado</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot open"></div>
+              <span>Disponible</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. TRIPLE CONVERGENCIA ────────────────────────────────────── -->
+  <section id="triple" class="section">
+    <div class="container">
+      <div class="triple-header fade-up">
+        <p class="eyebrow">Tres razones en diez días</p>
+        <h2>Este mes puede cambiarlo todo<br>para tu familia</h2>
+      </div>
+
+      <div class="triple-grid">
+
+        <div class="triple-card fade-up delay-1">
+          <span class="triple-icon">⚽</span>
+          <div class="triple-date">2026 · Copa Mundial USA</div>
+          <h3>El Mundial se juega en suelo americano</h3>
+          <p>El verano más grande del siglo llega a tu ciudad. ¿Ya tienes dónde recibirlo como merece tu familia?</p>
+        </div>
+
+        <div class="triple-card featured fade-up delay-2">
+          <span class="triple-icon">🏡</span>
+          <div class="triple-date">20 de Junio · Tu Evento</div>
+          <h3>El día que descubres si este es el año de tu casa</h3>
+          <p>En menos de 2 horas tienes la verdad sobre tu situación y el camino exacto para cruzar esa puerta.</p>
+        </div>
+
+        <div class="triple-card fade-up delay-3">
+          <span class="triple-icon">👨‍👧‍👦</span>
+          <div class="triple-date">15 de Junio · Día del Padre</div>
+          <h3>El regalo que más vale: un plan para tu familia</h3>
+          <p>No hay mejor forma de celebrar al padre que dando el paso que los cambia a todos. Llévalo contigo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. SOBRE ANGIE ─────────────────────────────────────────────── -->
+  <section id="angie">
+    <div class="angie-inner">
+
+      <div class="angie-photo-wrap">
+        <div class="angie-photo">
+          <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c75e09acb033d821f6.jpeg" alt="Angie Rubio Realtor" loading="lazy" />
+        </div>
+        <div class="angie-badge-float">
+          <span class="big">15+</span>
+          <span class="small">Años de<br>experiencia</span>
+        </div>
+      </div>
+
+      <div class="angie-text">
+        <p class="eyebrow">Quien te guía</p>
+        <h2>Angie Rubio no vende casas. Convierte familias.</h2>
+        <p>Convierte familias que creen que no pueden, en familias que ya tienen su casa. Lleva años haciendo una sola cosa: decirte la verdad sobre tu situación y mostrarte el camino exacto para cruzar esa puerta.</p>
+        <ul class="check-list">
+          <li><div class="check-icon">✓</div><span>Te dice la verdad — no lo que quieres oír</span></li>
+          <li><div class="check-icon">✓</div><span>Trabaja con tu situación real, desde cero, sin juicios</span></li>
+          <li><div class="check-icon">✓</div><span>No trabaja con auditorios de 200. Por eso hay 26 cupos.</span></li>
+          <li><div class="check-icon">✓</div><span>Asesoría 100% en español, sin intermediarios</span></li>
+        </ul>
+        <a href="#registro" class="btn btn-gold">Reserva tu cupo →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 7. TESTIMONIOS ─────────────────────────────────────────────── -->
+  <section id="testimonios" class="section">
+    <div class="container">
+      <div class="testi-inner">
+
+        <div class="testi-left fade-up">
+          <p class="eyebrow">Resultados reales</p>
+          <h2>Familias que ya dieron el paso</h2>
+          <p class="testi-intro">Cada familia que viene al evento sale con claridad. Muchas de ellas ya cerraron su casa. Aquí la prueba.</p>
+        </div>
+
+        <div class="testi-right fade-up delay-2">
+          <div class="testi-carousel" id="testiCarousel">
+            <div class="testi-viewport">
+              <div class="testi-track" id="testiTrack">
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c7999f3b1008940be0.jpg" alt="Familia celebrando la entrega de llaves con Angie Rubio Realtor" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Resultado real</span>
+                      <h3>Otra familia que ya dio el paso</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c76c22e95c9ec91fb1.jpg" alt="Familia con llave de su nueva casa con Angie Rubio" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Nuevo hogar</span>
+                      <h3>Comprar en familia también se logra</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c95a7f217776747184.jpg" alt="Clientes de Angie Rubio celebrando el cierre exitoso" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Cierre exitoso</span>
+                      <h3>El sueño de la casa propia hecho realidad</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c9999f3b1008940c00.jpg" alt="Familia hispana frente a su nueva propiedad en Georgia" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Primera vivienda</span>
+                      <h3>Tu primera casa más cerca de lo que crees</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c96c22e95c9ec91ff3.jpg" alt="Familia celebrando la compra de su casa con Angie Rubio" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Llave en mano</span>
+                      <h3>De la asesoría al cierre, en español</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c95e09acb033d8223d.jpg" alt="Familia con letrero Sold después del cierre en Georgia" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Sold!</span>
+                      <h3>Una historia más que ya se convirtió en hogar</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+                <article class="testi-slide">
+                  <figure class="testi-figure">
+                    <img src="https://assets.cdn.filesafe.space/YZPbVp7B4Tmy7WocFiPW/media/6a1600c9999f3b1008940c1e.jpg" alt="Pareja celebrando la compra de su casa con Angie Rubio Realtor" loading="lazy" />
+                    <figcaption class="testi-caption">
+                      <span class="testi-kicker">Celebración real</span>
+                      <h3>La mejor prueba es ver la alegría de cada entrega</h3>
+                    </figcaption>
+                  </figure>
+                </article>
+
+              </div>
+            </div>
+
+            <div class="testi-controls">
+              <button class="testi-btn" id="testiPrev" aria-label="Testimonio anterior">&#8592;</button>
+              <div class="testi-dots" id="testiDots"></div>
+              <button class="testi-btn" id="testiNext" aria-label="Siguiente testimonio">&#8594;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 8. CTA / REGISTRO ─────────────────────────────────────────── -->
+  <section id="registro" class="section">
+    <div class="container">
+      <div class="registro-inner">
+
+        <div class="registro-left fade-up">
+          <p class="eyebrow" style="color:var(--gold);">¿Eres parte del 35%?</p>
+          <h2>El 20 de junio<br>lo <em>descubres</em>.<br>Cupos limitados.</h2>
+          <p>Evento gratuito. Solo llegas. Con tu situación real, Angie trabaja desde cero contigo. Sin documentos, sin compromiso — y si al final del evento no es tu momento, te vas con claridad. Eso ya vale.</p>
+          <ul class="registro-perks">
+            <li>
+              <div class="perk-icon">✓</div>
+              <span>Gratis. Sin costo, sin compromiso.</span>
+            </li>
+            <li>
+              <div class="perk-icon">✓</div>
+              <span>No necesitas llevar documentos. Solo llegas.</span>
+            </li>
+            <li>
+              <div class="perk-icon">✓</div>
+              <span>Puedes traer a tu familia — deciden más rápido juntos.</span>
+            </li>
+            <li>
+              <div class="perk-icon">✓</div>
+              <span>En menos de 2 horas sabes exactamente dónde estás.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="registro-right fade-up delay-2">
+          <h3>Reserva tu cupo</h3>
+          <p class="sub">20 de Junio · Atlanta, GA · Evento gratuito</p>
+
+          <!-- TODO: reemplazar campos por iframe GHL cuando tengas el form ID del evento -->
+          <div class="registro-fields">
+            <div class="registro-field">
+              <label for="reg-nombre">Nombre</label>
+              <input type="text" id="reg-nombre" name="nombre" placeholder="Tu nombre completo" required />
+            </div>
+            <div class="registro-field">
+              <label for="reg-correo">Correo</label>
+              <input type="email" id="reg-correo" name="correo" placeholder="tu@correo.com" required />
+            </div>
+            <div class="registro-field">
+              <label for="reg-telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="reg-telefono" name="telefono" placeholder="+1 (000) 000-0000" required />
+            </div>
+          </div>
+
+          <a href="https://wa.me/14704046256?text=Hola%20Angie%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20evento%20del%2020%20de%20junio" target="_blank" rel="noopener" class="registro-cta-btn">
+            El 20 de junio lo descubro &nbsp;→
+          </a>
+
+          <p class="registro-microcopy">
+            Solo 26 cupos disponibles. &nbsp;·&nbsp; 100% gratuito.<br>
+            Sin compromiso de compra.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 9. FAQ ──────────────────────────────────────────────────────── -->
+  <section id="faq" class="section">
+    <div class="container">
+      <p class="eyebrow">Resolvemos tus dudas</p>
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="faq-list fade-up">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Y si mi crédito está mal?
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Más razón para venir. Necesitas saber exactamente cuánto te falta y en cuánto tiempo lo resuelves. Angie te da esa respuesta — no una estimación, el número real para tu situación específica.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Tengo que llevar documentos?
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No. Solo llega. Con tu situación real, Angie trabaja desde cero contigo. No necesitas preparar nada ni traer ningún papel para el evento.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Puedo traer a mi familia?
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Sí. De hecho, las familias que vienen juntas toman decisiones más rápido y más seguras. Si tu pareja, tus padres o cualquier persona es parte de la decisión, tráelos.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hay algún compromiso de compra?
+            <div class="faq-icon">+</div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Ninguno. Si al final del evento no es tu momento, te vas con claridad. Eso ya vale. El objetivo es que salgas sabiendo exactamente dónde estás — no que firmes nada esa noche.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">Angie Rubio <span>Realtor</span></div>
+    <p>Georgia, Estados Unidos &nbsp;·&nbsp; <a href="tel:+14704046256">+1 (470) 404-6256</a></p>
+    <br>
+    <p style="font-size:11px;">© 2026 Angie Rubio Realtor. Todos los derechos reservados. &nbsp;·&nbsp; <a href="#">Política de privacidad</a></p>
+  </footer>
+
+</div><!-- /ghl-breakout -->
+
+<!-- ── WHATSAPP FLOAT ──────────────────────────────────────────────── -->
+<a id="wa-float" href="https://wa.me/14704046256?text=Hola%20Angie%2C%20quiero%20reservar%20mi%20cupo%20para%20el%20evento%20del%2020%20de%20junio" target="_blank" rel="noopener" title="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ── SCRIPTS ─────────────────────────────────────────────────────── -->
+<script>
+  /* ── Countdown ── */
+  (function() {
+    const eventDate = new Date('2026-06-20T10:00:00');
+    function update() {
+      const now  = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML =
+          '<span style="color:var(--gold);font-family:Montserrat,sans-serif;font-weight:700;font-size:18px;">¡El evento ya comenzó!</span>';
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+      document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+    }
+    update();
+    setInterval(update, 1000);
+  })();
+
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item   = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  /* ── Testimonios carousel ── */
+  (function() {
+    const track    = document.getElementById('testiTrack');
+    const prev     = document.getElementById('testiPrev');
+    const next     = document.getElementById('testiNext');
+    const dotsWrap = document.getElementById('testiDots');
+    if (!track) return;
+    const slides = track.querySelectorAll('.testi-slide');
+    const total  = slides.length;
+    let current  = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Ir al testimonio ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    function goTo(index) {
+      current = index;
+      track.style.transform = 'translateX(-' + (100 * current) + '%)';
+      dotsWrap.querySelectorAll('.testi-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === current)
+      );
+      prev.disabled = current === 0;
+      next.disabled = current === total - 1;
+    }
+
+    prev.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    next.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) diff > 0
+        ? (current < total - 1 && goTo(current + 1))
+        : (current > 0 && goTo(current - 1));
+    });
+
+    goTo(0);
+
+    /* Auto-avance cada 5s */
+    setInterval(() => {
+      if (current < total - 1) goTo(current + 1);
+      else goTo(0);
+    }, 5000);
+  })();
+
+  /* ── Scroll fade-in ── */
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+</script>
+
+</body>
+</html>
